@@ -1,5 +1,4 @@
 import "./header.css"
-import { Link} from "react-router-dom"
 import Logo from "./img/Logo.png"
 import BasketImg  from "./img/Basket.png"
 import ProfileImg from "./img/Profile.png"
