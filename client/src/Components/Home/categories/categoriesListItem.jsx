@@ -8,7 +8,7 @@ const CategoriesListItem  = (props)=> {
     dispatch(setProduct(props.text));
   };
   return (
-    <li>
+    <li >
       <button
         onClick={handleClick}
         className={`${props.isActive ? s.btn_active : s.btn}`}
