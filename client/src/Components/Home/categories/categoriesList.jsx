@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-// import axios from "axios"
 import CategoriesListItem from "../categories/categoriesListItem"
 import {  setProduct } from "../../../features/sllices/productSllice"
+import s from '../categories/categories.module.scss'
 
 const CategoriesList = () => {
     const dispatch = useDispatch()
@@ -10,7 +10,7 @@ const CategoriesList = () => {
         dispatch(setProduct(categoriesActive))
     }
     return (
-        <ul>
+        <ul className={s.btnCategory}>
             {
                 categories.map(item => 
                     <CategoriesListItem key={item} text={item} isActive={item === categoriesActive}/>

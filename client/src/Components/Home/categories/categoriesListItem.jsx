@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { changeCategory, setProduct } from "../../../features/sllices/productSllice";
+import {  setProduct } from "../../../features/sllices/productSllice";
 import s from "./categories.module.scss"
 
 const CategoriesListItem  = (props)=> {
@@ -8,7 +8,7 @@ const CategoriesListItem  = (props)=> {
     dispatch(setProduct(props.text));
   };
   return (
-    <li className={s.btnCategory}>
+    <li>
       <button
         onClick={handleClick}
         className={`${props.isActive ? s.btn_active : s.btn}`}
