@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import axios from "axios"
+// import axios from "axios"
 import CategoriesListItem from "../categories/categoriesListItem"
 import {  setProduct } from "../../../features/sllices/productSllice"
 
