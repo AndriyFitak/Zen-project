@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { getProduct } from "../../Components/api/product"
 
 const initialState = {
-    categories: [ "Sweets", "Baking"],
+    categories: ["Drinks", "Sweets", "Baking"],
     categoriesActive: "Drinks",
     list: [
         
