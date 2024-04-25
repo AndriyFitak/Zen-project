@@ -9,6 +9,7 @@ const CategoriesList = () => {
     if (list.length === 0) {
         dispatch(setProduct(categoriesActive))
     }
+    console.log(categoriesActive)
     return (
         <ul className={s.btnCategory}>
             {

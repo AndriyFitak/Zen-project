@@ -24,6 +24,7 @@ const productSlice = createSlice({
         builder.addCase(setProduct.fulfilled, (state, action) => {
             state.isOpenProduct = true
             state.list = action.payload.productsList
+            state.categoriesActive = action.payload
         })
     },
     changeCategory: (state, action) => {
