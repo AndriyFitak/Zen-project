@@ -12,17 +12,17 @@ const Basket = () => {
     dispatch(loadBasket()); // завантаження кошика з LocalStorage при першому запуску
   }, [dispatch]);
 
-  const handleDelete = (id) => {
-    dispatch(removeFromBasket(id)); // видалення товару з кошика
+  const handleDelete = (name) => {
+    dispatch(removeFromBasket(name)); // видалення товару з кошика
   };
 
-  const handleIncreaseQuantity = (id) => {
-    dispatch(updateQuantity({ id, change: 1 })); // збільшення кількості
+  const handleIncreaseQuantity = (name) => {
+    dispatch(updateQuantity({ name, change: 1 })); // збільшення кількості
   };
 
-  const handleDecreaseQuantity = (id, quantity) => {
+  const handleDecreaseQuantity = (name, quantity) => {
     if (quantity > 1) {
-      dispatch(updateQuantity({ id, change: -1 })); // зменшення кількості
+      dispatch(updateQuantity({ name, change: -1 })); // зменшення кількості
     }
   };
 
@@ -40,13 +40,13 @@ const Basket = () => {
               <p className="product_Name">{item.name}</p>
               <p className="price-text">Price: {item.price} грн</p>
               <div className="quantity">
-                <button className="plus-minus-btn" onClick={() => handleIncreaseQuantity(item.id)}>+</button>
+                <button className="plus-minus-btn" onClick={() => handleIncreaseQuantity(item.name)}>+</button>
                 <p>{item.quantity}</p>
-                <button className="plus-minus-btn" onClick={() => handleDecreaseQuantity(item.id, item.quantity)}>-</button>
+                <button className="plus-minus-btn" onClick={() => handleDecreaseQuantity(item.name, item.quantity)}>-</button>
               </div>
               <div className="order-delete-btns">
                 <button className="order-btn">Замовити</button>
-                <button className="delete-btn" onClick={() => handleDelete(item.id)}>Видалити</button>
+                <button className="delete-btn" onClick={() => handleDelete(item.name)}>Видалити</button>
               </div>
             </div>
           ))}

@@ -4,6 +4,9 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+Link{
+    text-decoration: none;
+}
 .nav-menu{
     display: flex;
     gap: 20px;

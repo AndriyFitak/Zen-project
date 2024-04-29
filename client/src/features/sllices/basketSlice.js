@@ -26,7 +26,7 @@ const basketSlice = createSlice({
     // Додавання продукту до кошика
     addToBasket: (state, action) => {
       const product = action.payload;
-      const existingProduct = state.basket.find((item) => item.id === product.id);
+      const existingProduct = state.basket.find((item) => item.name === product.name);
 
       if (existingProduct) {
        
@@ -46,19 +46,19 @@ const basketSlice = createSlice({
     // Видалення продукту з кошика
     removeFromBasket: (state, action) => {
       const productId = action.payload;
-      state.basket = state.basket.filter((item) => item.id !== productId);
+      state.basket = state.basket.filter((item) => item.name !== productId);
       saveBasketToLocalStorage(state.basket);
+      
     },
 
     // Оновлення кількості
     updateQuantity: (state, action) => {
-      const { id, change } = action.payload;
-      const product = state.basket.find((item) => item.id === id);
+      const { name, change } = action.payload;
+      const product = state.basket.find((item) => item.name === name);
       if (product) {
         product.quantity += change;
         if (product.quantity <= 0) {
-
-          state.basket = state.basket.filter((item) => item.id !== id);
+          state.basket = state.basket.filter((item) => item.name !== name);
         }
       }
       saveBasketToLocalStorage(state.basket);
