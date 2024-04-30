@@ -24,6 +24,34 @@
 .main-section {
     width: 100%;
     margin-top: 100px;
+    &_cont {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        &_input {
+            width: 80%;
+            height: 30px;
+            margin: 10px 0px;
+            background: #FFE4CB;
+            border: none;
+            border-radius: 2px;
+            padding-left: 10px;
+        }
+        &_button {
+            width: 20%;
+            height: 30px;
+            margin: 10px 0px;
+            background: #78BD58;
+            border: none;
+            border-radius: 2px;
+            color: white;
+            transition-duration: 1s;
+            &:hover {
+                background: #6caa4f;
+                transition-duration: 1s;
+            }
+        }
+    }
     .card {
         width: 40%;
         height: 110px;

@@ -1,12 +1,29 @@
 import BackToTheMain from "../BackToTheMain/BackToTheMain";
 import ProductsList from "./ProductsList/ProductsList";
 
-import img from '../PlaceAnOrder/img.png'
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+
+import { ordersGet } from "../../features/slices/yourOrders";
 
 import './YourOrders.scss';
 import './media.scss';
 
 const YourOrders = () => {
+    const dispatch = useDispatch();
+
+    const list = useSelector(state => state.yourOrders.list);
+
+    const phoneNumber = localStorage.getItem('phoneNumber');
+
+    useEffect(() => {
+        if (phoneNumber) {
+            dispatch(ordersGet({ phoneNumber: phoneNumber }));
+        } else {
+            alert('You do not have any orders');
+        };
+    }, [])
+
     return (
         <div className="container">
             <section className="upper-section">
@@ -17,14 +34,24 @@ const YourOrders = () => {
                 </div>
             </section>
             <section className="main-section">
-                <ProductsList
-                img={img}
-                name='Teriyaki Chiken'
-                price='109'
-                count='1'
-                date='28 бер.,2024 21:20'
-                status='Доставлено'
-                />
+            {
+                list.map(item => {
+                    return (
+                    item.orderProducts.map(product => (
+                        <ProductsList
+                        key={product._id}
+                        id={product._id}
+                        img={product.imgSrc}
+                        name={product.productName}
+                        price={product.productPrice}
+                        count={product.count}
+                        date={item.createdAt}
+                        status='Доставлено'
+                        />
+                    ))
+                    )
+                })
+            }
             </section>
         </div>
     );

@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
+import placeAnOrder from './slices/createOrder'
+import yourOrders from './slices/yourOrders'
+
 const store = configureStore({
     reducer: {
-        // slices here
+        createOrder: placeAnOrder,
+        yourOrders: yourOrders
     }
 })
 
