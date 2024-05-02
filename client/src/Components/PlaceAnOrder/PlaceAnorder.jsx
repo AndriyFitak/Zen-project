@@ -87,13 +87,12 @@ const PlaceAnOrder = () => {
                     dispatchCreateOrder();
                     return;
                 } else {
-                    alert('Invalid request!');
+                    alert('Incorrect request!');
                 };
             }
             if (!localStorage.getItem('phoneNumber')) dispatchCreateOrder();
         } else {
-            // change in future
-            alert('Invalid request!');
+            alert('Incorrect request!');
         };
     }
 

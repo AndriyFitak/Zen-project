@@ -3,7 +3,7 @@ import PlaceAnOrder from './Components/PlaceAnOrder/PlaceAnorder';
 
 const App = () => {
     return (
-        <YourOrders/>
+        <PlaceAnOrder/>
     )
 }
 
