@@ -5,8 +5,10 @@ header{
     align-items: center;
 }
 .nav-menu{
+    cursor: pointer;
     display: flex;
-    gap: 20px;
+    margin-left: 25px;
+    gap: 25px;
 }
 .your-info{
     display: flex;
@@ -15,13 +17,17 @@ header{
 }
 .nav-text{
     color: #A3876E;
+    font-size: 20px;
+    
 }
 hr{
-    width: 1px;
+    width: 2px;
     height: 27px;
     background-color: #4A3D31;
+    border: none;
 }
 .info-img-basket{
+    margin-top: 15px;
     width: 51px;
     height: 51px;
 }
@@ -43,6 +49,17 @@ hr{
     width: 50px;
     height: 50px;
     display: none;
+}
+.logo{
+    width: 130px;
+    margin-left: 50px;
+}
+.hrHeader{
+    width: 100%;
+    height: 3px;
+    border: none;
+    margin-top: -15px;
+    background: #E6C09D;
 }
 @media screen and (max-width: 950px) {
     .nav-menu{

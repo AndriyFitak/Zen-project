@@ -1,12 +1,13 @@
 import "./header.css"
-import Logo from "./img/Logo.png"
-import BasketImg  from "./img/Basket.png"
-import ProfileImg from "./img/Profile.png"
+import Logo from "./img/Logo.svg"
+import BasketImg  from "./img/Basket.svg"
+import ProfileImg from "./img/Profile.svg"
 import BurgerImg from "./img/Burger.svg"
 const Header = () => {
     return(
+        <>
         <header>
-            <img className="" src={Logo} alt="" />
+            <img className="logo" src={Logo} alt="" />
             <nav className="nav-menu">
                 <p to="/"><p className="nav-text">Home</p></p>
                 <p to="/ourorders"><p className="nav-text">Our orders</p></p>
@@ -24,6 +25,8 @@ const Header = () => {
             </div>
             <img className="Burger" src={BurgerImg} alt="" />
         </header>
+        <hr className="hrHeader"></hr>
+        </>
     )
 }
 
