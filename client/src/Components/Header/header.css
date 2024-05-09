@@ -4,6 +4,9 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+Link{
+    text-decoration: none;
+}
 .nav-menu{
     cursor: pointer;
     display: flex;
@@ -22,6 +25,10 @@ header{
 }
 hr{
     width: 2px;
+}
+.hr-header{
+    width: 1px;
+
     height: 27px;
     background-color: #4A3D31;
     border: none;
