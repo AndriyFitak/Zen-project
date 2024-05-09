@@ -15,7 +15,7 @@ const Header = () => {
             </nav>
             <div className="your-info">
                 <div className="basket">
-                    <hr />
+                    <hr className="hr-header"/>
                     <Link to="/basket"><img className="info-img-basket" src={BasketImg} alt="" /></Link>
                 </div>
                  <div className="profile">
@@ -24,7 +24,9 @@ const Header = () => {
                  </div>
             </div>
             <img className="Burger" src={BurgerImg} alt="" />
+            
         </header>
+        
     )
 }
 

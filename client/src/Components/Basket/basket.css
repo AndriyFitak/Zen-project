@@ -83,7 +83,8 @@
   
   .order-delete-btns {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
     width: 100%;
     padding: 10px 20px;
   }
