@@ -14,6 +14,7 @@ const initialState = {
     ],
     isLoading: false,
     isError: false,
+    isOpenModal: false,
     totalPrice: 0
 }
 
@@ -37,6 +38,10 @@ const placeAnOrder = createSlice(
                     state.totalPrice = finishPrice;
                     return state;
                 });
+            },
+            changeIsOpenModal: state => {
+                state.isOpenModal = !state.isOpenModal;
+                return state;
             },
             changeCount: (state, action) => {
                 const { id, operation } = action.payload;
@@ -71,6 +76,6 @@ const placeAnOrder = createSlice(
     }
 );
 
-export const { finishPrice, changeCount } = placeAnOrder.actions;
+export const { finishPrice, changeCount, changeIsOpenModal } = placeAnOrder.actions;
 
 export default placeAnOrder.reducer;

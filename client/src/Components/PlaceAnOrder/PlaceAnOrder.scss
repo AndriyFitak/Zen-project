@@ -69,6 +69,7 @@
                     border: none;
                     border-radius: 4px;
                     transition-duration: 0.5s;
+                    cursor: pointer;
                     &:hover {
                         background: #846c55;
                         transition-duration: 0.5s;
@@ -152,6 +153,7 @@
                 border-radius: 4px;
                 margin-top: 10px;
                 transition-duration: 1s;
+                cursor: pointer;
                 &:hover {
                     background: #3e4960;
                     transition-duration: 1s;

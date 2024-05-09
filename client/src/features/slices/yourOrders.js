@@ -8,7 +8,6 @@ const initialState = {
     isLoading: false,
     isError: false,
     phoneNumber: localStorage.getItem('phoneNumber') || '',
-    isOpenInput: true
 }
 
 export const ordersGet = createAsyncThunk(
