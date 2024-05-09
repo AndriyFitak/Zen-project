@@ -10,6 +10,8 @@ const initialState = {
         
     ],
     filter: [],
+    searchValue: "",
+    inSearch: false
 }
 
 export const setProduct = createAsyncThunk(
@@ -29,7 +31,15 @@ const productSlice = createSlice({
             state.list = state.list.filter((el) => el.categories ===  action.payload)
         },
         changeSearch: (state, action) => {
-            state.filter = searchProduct(state.list,action.payload)
+            state.searchValue = action.payload
+            if (action.payload.length != 0) {
+                state.inSearch = true
+            } else {
+                state.inSearch = false
+            }
+        },
+        startSearch: (state) => {
+           state.filter = searchProduct(state.list, state.searchValue)
         }
     },
     extraReducers: builder => {
@@ -42,6 +52,6 @@ const productSlice = createSlice({
     
 })
 
-export const {changeCategory, changeSearch} = productSlice.actions
+export const {changeCategory, changeSearch, startSearch} = productSlice.actions
 
 export default productSlice.reducer

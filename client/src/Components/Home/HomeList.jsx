@@ -6,17 +6,26 @@ import welcomeImg from "../Home/welcomeImg.svg"
 
 const HomeList = (props) => {
     const dispatch = useDispatch()
-   const { list, categoriesActive } = useSelector((state) => state.product)
+   const { list, categoriesActive, filter, inSearch } = useSelector((state) => state.product)
    let category = "";
    if (categoriesActive.productsList) {
     category = categoriesActive.productsList[0].category
 
    }
-   const ProductCollection = list.map(item => {
-    return (
-        <HomeListItem key={item.id} id={item.id} name={item.name} price={item.price} photo={item.photo}/>
-    )
-})
+   let ProductCollection
+if (inSearch) {
+    ProductCollection = filter.map(item => {
+        return (
+            <HomeListItem key={item.id} id={item.id} name={item.name} price={item.price} photo={item.photo}/>
+        )
+    })
+} else {
+     ProductCollection = list.map(item => {
+        return (
+            <HomeListItem key={item.id} id={item.id} name={item.name} price={item.price} photo={item.photo}/>
+        )
+    })
+}
     return (
         <div>
             <img className={s.welcomeImg} src={welcomeImg} alt="home welcome"/>

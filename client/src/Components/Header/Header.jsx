@@ -1,13 +1,11 @@
 import "./header.css"
-import Logo from "./img/Logo.svg"
-import BasketImg  from "./img/Basket.svg"
-import ProfileImg from "./img/Profile.svg"
-import BurgerImg from "./img/Burger.svg"
+import { Link } from "react-router-dom"
+import { BasketIcon, BurgerIcon, LogoIcon, ProfileIcon } from "../BackToTheMain/Icons/icons"
 const Header = () => {
     return(
         <>
         <header>
-            <img className="logo" src={Logo} alt="" />
+            <p className="logo" ><LogoIcon/></p>
             <nav className="nav-menu">
                 <p to="/"><p className="nav-text">Home</p></p>
                 <p to="/ourorders"><p className="nav-text">Our orders</p></p>
@@ -16,14 +14,14 @@ const Header = () => {
             <div className="your-info">
                 <div className="basket">
                     <hr />
-                    <p to="/basket"><img className="info-img-basket" src={BasketImg} alt="" /></p>
+                    <Link to="/basket"><BasketIcon/></Link>
                 </div>
                  <div className="profile">
                     <p className="nav-text">Your profile</p>
-                    <img className="info-img-profile" src={ProfileImg} alt="" />
+                    <p className="info-img-profile"  ><ProfileIcon/></p>
                  </div>
             </div>
-            <img className="Burger" src={BurgerImg} alt="" />
+            <p className="Burger" ><BurgerIcon/></p>
         </header>
         <hr className="hrHeader"></hr>
         </>
