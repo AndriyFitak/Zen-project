@@ -38,7 +38,7 @@ const Basket = () => {
             <div className="product-card" key={item.id}>
               <img className="product-img" src={item.photo} alt={item.name} />
               <p className="product_Name">{item.name}</p>
-              <p className="price-text">Price: {item.price} грн</p>
+              <p className="price-text">Price: {item.allPrice} грн</p>
               <div className="quantity">
                 <button className="plus-minus-btn" onClick={() => handleIncreaseQuantity(item.name)}>+</button>
                 <p>{item.quantity}</p>
