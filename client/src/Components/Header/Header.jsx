@@ -12,7 +12,7 @@ const Header = () => {
                 <Link to="/information"><p className="nav-text">Information</p></Link>
             </nav>
             <div className="your-info">
-                <div className="basket">
+                <div className="basket">    
                     <hr />
                     <Link to="/basket"><BasketIcon/></Link>
                 </div>
