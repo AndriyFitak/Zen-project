@@ -19,6 +19,7 @@ Link{
     gap: 50px;
 }
 .nav-text{
+    text-decoration: none;
     color: #A3876E;
     font-size: 20px;
     
@@ -28,7 +29,6 @@ hr{
 }
 .hr-header{
     width: 1px;
-
     height: 27px;
     background-color: #4A3D31;
     border: none;
