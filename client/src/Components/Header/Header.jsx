@@ -1,8 +1,6 @@
 import "./header.css"
-import Logo from "./img/Logo.png"
-import BasketImg  from "./img/Basket.png"
-import ProfileImg from "./img/Profile.png"
-import BurgerImg from "./img/Burger.svg"
+import { LogoIcon, ProfileIcon, BasketIcon, BurgerIcon } from "../BackToTheMain/Icons/icons"
+import { Link } from "react-router-dom"
 const Header = () => {
     return(
         <>
@@ -16,14 +14,14 @@ const Header = () => {
             <div className="your-info">
                 <div className="basket">
                     <hr />
-                    <p to="/basket"><img className="info-img-basket" src={BasketImg} alt="" /></p>
+                    <Link to="/basket"><BasketIcon/></Link>
                 </div>
                  <div className="profile">
                     <p className="nav-text">Your profile</p>
                     <p className="info-img-profile"  ><ProfileIcon/></p>
                  </div>
             </div>
-            <img className="Burger" src={BurgerImg} alt="" />
+            <button className="Burger"><BurgerIcon/></button>
         </header>
         </>
     )

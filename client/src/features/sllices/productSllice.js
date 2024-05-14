@@ -32,7 +32,7 @@ const productSlice = createSlice({
         },
         changeSearch: (state, action) => {
             state.searchValue = action.payload
-            if (action.payload.length != 0) {
+            if (action.payload.length !== 0) {
                 state.inSearch = true
             } else {
                 state.inSearch = false
