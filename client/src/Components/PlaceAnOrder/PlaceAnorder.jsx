@@ -105,7 +105,7 @@ const PlaceAnOrder = () => {
         <>
         {
             isLoading && 
-            <center>
+            <center className='loading'>
                 <img src={loading} alt="loading" />
             </center>
         }

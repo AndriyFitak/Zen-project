@@ -32,7 +32,7 @@ const YourOrders = () => {
         <>
             {
                 isLoading && 
-                <center>
+                <center className='loading'>
                     <img src={loading} alt="loading" />
                 </center>
             }
@@ -64,7 +64,7 @@ const YourOrders = () => {
                             price={product.productPrice}
                             count={product.count}
                             date={item.createdAt}
-                            status='Доставлено'
+                            status='В процесі'
                             />
                         ))
                         )

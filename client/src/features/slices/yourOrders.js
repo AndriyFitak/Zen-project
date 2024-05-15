@@ -7,7 +7,7 @@ const initialState = {
     ],
     isLoading: false,
     isError: false,
-    phoneNumber: localStorage.getItem('phoneNumber') || '',
+    phoneNumber: localStorage.getItem('phoneNumber') || ''
 }
 
 export const ordersGet = createAsyncThunk(
@@ -22,7 +22,11 @@ const getOrder = createSlice(
     {
         name: 'getOrders',
         initialState,
-        reducers: {},
+        reducers: {
+            changeStatus: state => {
+                state.status = 'Виконано';
+            }
+        },
         extraReducers: builder => {
             builder
                 .addCase(ordersGet.pending, state => {
@@ -38,5 +42,7 @@ const getOrder = createSlice(
         }
     }
 );
+
+export const { changeStatus } = getOrder.actions;
 
 export default getOrder.reducer;
