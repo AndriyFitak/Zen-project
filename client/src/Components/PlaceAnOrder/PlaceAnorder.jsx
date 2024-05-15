@@ -19,7 +19,6 @@ const PlaceAnOrder = () => {
 
     const ordersList = useSelector(state => state.createOrder.list)
     const { isLoading, isError, isOpenModal } = useSelector(state => state.createOrder);
-    console.log(isOpenModal)
 
     const totalPrice = useSelector(state => state.createOrder.totalPrice);
 
@@ -82,7 +81,7 @@ const PlaceAnOrder = () => {
 
       const handleCreateOrder = () => {
         form.orderProducts = ordersList;
-        if (form.name && form.phoneNumber && form.cardNumber && form.delivery.typeDel && form.orderProducts && form.delivery.typeDel) {
+        if (form.name && form.phoneNumber && form.cardNumber && form.delivery.typeDel && form.orderProducts) {
             if (form.delivery.typeDel === 'delivery') {
                 if (form.delivery.adress) {
                     dispatchCreateOrder();
@@ -92,7 +91,7 @@ const PlaceAnOrder = () => {
                     return;
                 };
             }
-            if (!localStorage.getItem('phoneNumber')) dispatchCreateOrder();
+            dispatchCreateOrder();
         } else {
             dispatch(changeIsOpenModal());
         };
@@ -133,10 +132,10 @@ const PlaceAnOrder = () => {
                 <section className="cards-section">
                     { ordersList.map(item => (
                         <ProductsList
-                        imgSrc={item.imgSrc}
-                        name={item.productName}
-                        price={item.productPrice}
-                        count={item.count}
+                        imgSrc={item.photo}
+                        name={item.name}
+                        price={item.allPrice}
+                        count={item.quantity}
                         id={item.id}
                         key={item.id}
                         />
@@ -169,7 +168,7 @@ const PlaceAnOrder = () => {
                                 <p>Wishes</p>
                                 <textarea placeholder='Write your wishes' cols="20" rows="5" className="form_div_valid-input" onChange={(e) => handleUpdateForm('wishes', e.target.value)}></textarea>
                             </div>
-                                <p className='total-price'>Total price: <strong>{totalPrice}</strong></p>
+                                <p className='total-price'>Total price: <strong>{totalPrice} uah</strong></p>
                         </div>
                         <div className="form_delivery">
                             <div className="form_delivery_buttons">

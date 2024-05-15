@@ -2,16 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { createOrder } from '../../api/orders';
 
 const initialState = {
-    list: [
-        {
-            imgSrc: 'asdkjasd',
-            productName: 'Cool product',
-            productPrice: 100,
-            initialPrice: 100,
-            count: 1,
-            id: 1
-        }
-    ],
+    list: JSON.parse(localStorage.getItem('basket')) || [],
     isLoading: false,
     isError: false,
     isOpenModal: false,
@@ -34,7 +25,7 @@ const placeAnOrder = createSlice(
             finishPrice: state => {
                 let finishPrice = 0;
                 state.list.forEach(item => {
-                    finishPrice = finishPrice + item.initialPrice * item.count;
+                    finishPrice = item.price * item.quantity;
                     state.totalPrice = finishPrice;
                     return state;
                 });
@@ -50,13 +41,13 @@ const placeAnOrder = createSlice(
                 if (!foundProduct) return state;
 
                 if (operation === 'minus') {
-                    if (foundProduct.count > 1) {
-                        foundProduct.count--;
-                        foundProduct.productPrice = foundProduct.initialPrice * foundProduct.count;
+                    if (foundProduct.quantity > 1) {
+                        foundProduct.quantity--;
+                        foundProduct.allPrice = foundProduct.price * foundProduct.quantity;
                     }
                 } else {
-                    foundProduct.count++;
-                    foundProduct.productPrice = foundProduct.initialPrice * foundProduct.count;
+                    foundProduct.quantity++;
+                    foundProduct.allPrice = foundProduct.price * foundProduct.quantity;
                 }
                 return state;
             }
