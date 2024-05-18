@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
-.btnCategory{
-    
+.categories{
+    margin-top: 20px;
+    margin-bottom: 20px;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 .btn{
-    
     background: #C59E79;
     color: white;
     border-radius: 16px;

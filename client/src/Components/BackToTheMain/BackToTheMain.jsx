@@ -2,9 +2,13 @@ import './BackToTheMain.scss'
 
 import iconSrc from './img/img.svg';
 
+import { useNavigate } from 'react-router-dom';
+
 const BackToTheMain = () => {
+    const navigate = useNavigate();
+
     return (
-        <div className="wrapper">
+        <div className="wrapper" onClick={() => navigate('/')}>
             <div className="icon">
                 <img src={iconSrc} alt="icon" />
             </div>

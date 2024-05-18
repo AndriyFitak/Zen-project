@@ -46,6 +46,9 @@
 
 @media(max-width:750px) {
     .main-section {
+        &_cont {
+            width: 100%;
+        }
         .card {
             flex-direction: column;
             align-items: center;

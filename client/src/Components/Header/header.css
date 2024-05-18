@@ -1,11 +1,8 @@
-header{
+.header{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-Link{
-    text-decoration: none;
 }
 .nav-menu{
     cursor: pointer;
@@ -52,9 +49,11 @@ hr{
     align-items: center;
     gap: 5px;
 }
-.Burger{
+.burger{
     width: 50px;
     height: 50px;
+    background: none;
+    border: none;
     display: none;
 }
 .logo{
@@ -75,7 +74,7 @@ hr{
     .your-info{
         display: none !important;
     }
-    .Burger{
+    .burger{
         display: block;
     }
 }
