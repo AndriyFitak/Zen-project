@@ -9,6 +9,7 @@ const HomeListItem = ({ id, name, price, photo }) => {
 
   const handleAddToBasket = () => {
     const product = { id, name, price, photo };
+    console.log(product);
     dispatch(addToBasket(product));
   };
 
