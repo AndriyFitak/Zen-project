@@ -1,18 +1,45 @@
 .footer{
+    width: 100vw;
     display: flex;
+    justify-content: space-around;
     border-top: 5px solid #88613D;
     border-bottom: 5px solid #88613D;
     column-gap: 200px;
+    &_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     &_QuickNavigation{
         &_nav{
             display: flex;
             text-decoration: none;
-            gap: 25px;
+            margin-top: 5px;
             color: #967B62;
             font-size: 22px;
-        }
+        }   
+    }
+    &_DownloadAppIcon {
+        margin-top: 5px;
     }
     &_text{
         margin-top: 60px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        &_QuickNavigation {
+            margin-top: 30px;
+        }
+        &_DownloadApp {
+            margin-top: 30px;
+        }
+        .FollowUs {
+            margin-top: 30px;
+        }
     }
 }

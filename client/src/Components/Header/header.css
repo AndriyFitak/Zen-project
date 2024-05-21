@@ -67,7 +67,8 @@ hr{
     margin-top: -15px;
     background: #E6C09D;
 }
-@media screen and (max-width: 950px) {
+
+@media screen and (max-width: 1300px) {
     .nav-menu{
         display: none !important;
     }

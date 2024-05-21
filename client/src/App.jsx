@@ -4,7 +4,6 @@ import PlaceAnOrder from './Components/PlaceAnOrder/PlaceAnorder';
 import YourOrders from './Components/YourOrders/YourOrders';
 
 import { BrowserRouter, Routes, Route}  from"react-router-dom"
-import Footer from './Components/Footer/Footer'
 
 const App = () => {
     return (
@@ -27,7 +26,6 @@ const App = () => {
             }/>
             
         </Routes>
-        <Footer/>
         </BrowserRouter>
         </>
     )

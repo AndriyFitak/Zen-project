@@ -25,7 +25,6 @@
     }
 }
 .hr{
-    
     width: 868px;
     height: 2px;
     border: none;
@@ -33,14 +32,13 @@
 }
 .product{
     background: url(../Group.svg);
-    background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
     padding-top: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px ;
+    gap: 30px;
     justify-content: center;
     &_photo{
         margin-top: 45px;
@@ -86,4 +84,11 @@
     font-family: "Jomhuria", serif;
     text-align: center;
     font-size: 40px;
+}
+
+.mainWrapper {
+    width: 100%;
+}
+.totalWrapper {
+    width: 100vw;
 }

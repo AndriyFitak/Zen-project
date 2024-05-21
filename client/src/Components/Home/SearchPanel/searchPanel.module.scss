@@ -21,3 +21,11 @@
     background: #be9b7b;
   }
 }
+
+@media (max-width: 480px) {
+  .search {
+    &_input {
+      width: 50%;
+    }
+  }
+}

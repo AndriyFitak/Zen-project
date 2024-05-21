@@ -3,6 +3,7 @@ import HomeListItem from "./HomeListItem"
 import { setProduct } from "../../features/sllices/productSllice"
 import s from "../Home/categories/categories.module.scss"
 import welcomeImg from "../Home/welcomeImg.svg"
+import Footer from '../Footer/Footer'
 
 const HomeList = (props) => {
     const dispatch = useDispatch()
@@ -26,15 +27,17 @@ if (inSearch) {
     })
 }
     return (
-        <div>
-            <img className={s.welcomeImg} src={welcomeImg} alt="home welcome"/>
-            <hr className={s.hr}></hr>
-            <p className={s.title}>{category}</p>
-            <div className={s.product}>
-            {ProductCollection}
+        <>
+            <div className={s.totalWrapper}>
+                <img className={s.welcomeImg} src={welcomeImg} alt="home welcome"/>
+                <hr className={s.hr}></hr>
+                <p className={s.title}>{category}</p>
+                <div className={s.product}>
+                {ProductCollection}
+                </div>
             </div>
-        </div>
-
+            <Footer/>
+        </>
     )
 }
 
