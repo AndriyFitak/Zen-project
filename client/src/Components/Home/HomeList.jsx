@@ -1,11 +1,9 @@
-import {useSelector, useDispatch} from "react-redux"
+import {useSelector} from "react-redux"
 import HomeListItem from "./HomeListItem"
-import { setProduct } from "../../features/sllices/productSllice"
 import s from "../Home/categories/categories.module.scss"
 import welcomeImg from "../Home/welcomeImg.svg"
 
-const HomeList = (props) => {
-    const dispatch = useDispatch()
+const HomeList = () => {
    const { list, categoriesActive, filter, inSearch } = useSelector((state) => state.product)
    let category = "";
    if (categoriesActive.productsList) {
@@ -16,13 +14,13 @@ const HomeList = (props) => {
 if (inSearch) {
     ProductCollection = filter.map(item => {
         return (
-            <HomeListItem key={item.id} id={item.id} name={item.name} price={item.price} photo={item.photo}/>
+            <HomeListItem key={item._id} id={item._id} name={item.name} price={item.price} photo={item.photo}/>
         )
     })
 } else {
      ProductCollection = list.map(item => {
         return (
-            <HomeListItem key={item.id} id={item.id} name={item.name} price={item.price} photo={item.photo}/>
+            <HomeListItem key={item._id} id={item._id} name={item.name} price={item.price} photo={item.photo}/>
         )
     })
 }

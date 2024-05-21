@@ -34,7 +34,7 @@ const basketSlice = createSlice({
       const product = action.payload;
       let isBasketItem = false;
       state.basket = state.basket.map((item) => {
-        if (item.name === product.name) {
+        if (item.id === product.id) {
           isBasketItem = true;
           item.quantity += 1;
           item.allPrice = item.quantity * item.price; // Оновлення загальної ціни продукту
@@ -57,19 +57,19 @@ const basketSlice = createSlice({
     // Видалення продукту з кошика
     removeFromBasket: (state, action) => {
       const productId = action.payload;
-      state.basket = state.basket.filter((item) => item.name !== productId);
+      state.basket = state.basket.filter((item) => item.id !== productId);
       saveBasketToLocalStorage(state.basket);
     },
 
     // Оновлення кількості
     updateQuantity: (state, action) => {
-      const { name, change } = action.payload;
-      const product = state.basket.find((item) => item.name === name);
+      const { id, change } = action.payload;
+      const product = state.basket.find((item) => item.id === id);
       if (product) {
         product.quantity += change;
         product.allPrice = product.quantity * product.price; // Оновлення загальної ціни продукту при зміні кількості
         if (product.quantity <= 0) {
-          state.basket = state.basket.filter((item) => item.name !== name);
+          state.basket = state.basket.filter((item) => item.id !== id);
         }
       }
       saveBasketToLocalStorage(state.basket);
