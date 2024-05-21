@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadBasket, removeFromBasket, updateQuantity } from "../../features/sllices/basketSlice";
+import Header from "../Header/Header";
 
 import "./basket.css"; // Враховуючи існуючі стилі
 
@@ -29,6 +30,8 @@ const Basket = () => {
   const totalPrice = basket.reduce((acc, item) => acc + item.price * item.quantity, 0); // розрахунок загальної вартості кошика
 
   return (
+    <>
+    <Header/>
     <div className="container">
       <div className="page">
         <p className="basket-text">Basket</p>
@@ -58,6 +61,7 @@ const Basket = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

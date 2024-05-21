@@ -8,7 +8,6 @@ const HomeList = () => {
    let category = "";
    if (categoriesActive.productsList) {
     category = categoriesActive.productsList[0].category
-
    }
    let ProductCollection
 if (inSearch) {

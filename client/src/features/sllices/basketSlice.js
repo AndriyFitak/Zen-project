@@ -21,6 +21,7 @@ const saveBasketToLocalStorage = (basket) => {
   const updatedBasket = basket.map((item) => ({
     ...item,
     allPrice: item.price * item.quantity,
+    id: item.id
   }));
   localStorage.setItem("basket", JSON.stringify(updatedBasket));
 };
@@ -47,7 +48,7 @@ const basketSlice = createSlice({
           {
             ...product,
             quantity: 1,
-            allPrice: product.price, // Початкова ціна при додаванні товару
+            allPrice: product.price // Початкова ціна при додаванні товару
           },
         ];
       }

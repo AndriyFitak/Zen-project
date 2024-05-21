@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    border-top: 5px solid #88613D;
+    border-bottom: 5px solid #88613D;
+    column-gap: 200px;
+    &_QuickNavigation{
+        &_nav{
+            display: flex;
+            text-decoration: none;
+            gap: 25px;
+            color: #967B62;
+            font-size: 22px;
+        }
+    }
+    &_text{
+        margin-top: 60px;
+    }
+}
