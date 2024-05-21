@@ -11,7 +11,7 @@ const CategoriesList = () => {
     }
     console.log(categoriesActive)
     return (
-        <ul className={s.btnCategory}>
+        <ul className={s.categories}>
             {
                 categories.map(item => 
                     <CategoriesListItem key={item} text={item} isActive={item === categoriesActive}/>

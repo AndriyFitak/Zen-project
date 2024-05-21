@@ -1,6 +1,6 @@
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { getProduct } from "../../Components/api/product"
+import { getProduct } from "../../api/product"
 import searchProduct from "../search"
 
 const initialState = {
@@ -32,7 +32,7 @@ const productSlice = createSlice({
         },
         changeSearch: (state, action) => {
             state.searchValue = action.payload
-            if (action.payload.length != 0) {
+            if (action.payload.length !== 0) {
                 state.inSearch = true
             } else {
                 state.inSearch = false

@@ -24,7 +24,7 @@ export const BasketIcon = () => {
 
 export const BurgerIcon = () => {
     return (
-            <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <title>menu-hamburger-solid</title>
         <g id="Layer_2" dataName="Layer 2">
             <g id="invisible_box" dataName="invisible box">
