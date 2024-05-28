@@ -26,7 +26,7 @@ const YourOrders = () => {
         } else {
             alert('You do not have any orders');
         };
-    }, [])
+    }, [phoneNumber, dispatch])
 
     return (
         <>

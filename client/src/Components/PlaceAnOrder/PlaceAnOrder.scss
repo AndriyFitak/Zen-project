@@ -1,5 +1,9 @@
 @import '../../utils/styles.scss';
 
+body {
+    height: 100vh;
+}
+
 .loading {
     margin-top: 500px;
     position: fixed;

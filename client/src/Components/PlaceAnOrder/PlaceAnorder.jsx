@@ -99,7 +99,7 @@ const PlaceAnOrder = () => {
 
     useEffect(() => {
         dispatch(finishPrice());
-    }, [])
+    }, [dispatch, finishPrice])
 
     return (
         <>
