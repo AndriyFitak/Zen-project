@@ -1,0 +1,169 @@
+.container{
+    width: 100%;
+    height: 1080px;
+    
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.info{
+    width: 7.4962518741vw;
+    height: 50px;
+    margin: 0 auto;
+    background: #E6C09D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 5000px;
+    transform: rotate(180deg)
+}
+.pInfo{
+    transform: rotate(180deg);
+    font-family: "Inter, sans-serif";
+    font-weight: normal;
+    color: #000;
+    font-size: 1rem;
+}
+.body{
+    width: 100%;
+}
+.social-networkP{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.social-networkblock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.social-networkblockprocent{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.social-network1{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.facebookblock{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.youtubeblock{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.instagramblock{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.instagram{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.social-network2{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.telegramblock{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.whatsupblock{
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+.numbersP{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.phone-numbersblock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.phone-numbersblockprocent{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.phone-numbersblock1{
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+}
+.kievstarblock{
+    display: flex;
+    align-items: center;
+}
+.vadafoneblock{
+    display: flex;
+    align-items: center;
+}
+.phone-numbersblock2{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+}
+.lifecellblock{
+    display: flex;
+    align-items: center;
+}
+.mailP{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mailblock{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+
+}
+.Our-partnersP{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ourpartnersblock{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 26px;
+}
